@@ -1,0 +1,5 @@
+//create bot
+curl -v  -X PUT 'https://aiaas.pandorabots.com/bot/1409612552099/BOTNAME?user_key=f235e69c83e364e4740871997a3f8c0f'
+
+//get list of bots
+curl -v  -X GET 'https://aiaas.pandorabots.com/bot/1409612552099?user_key=f235e69c83e364e4740871997a3f8c0f'
