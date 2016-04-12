@@ -21,8 +21,8 @@
           var response = data["responses"];
           //document.getElementById("response").innerHTML = response;
           var botnode = document.createElement("LI");
-          var botnode = document.createTextNode("crashb0t: " + response);
-          botnode.appendChild(botnode);
+          var textnode = document.createTextNode("crashb0t: " + response);
+          botnode.appendChild(textnode);
           document.getElementById("response_list").appendChild(botnode);
           console.log(response);
         });
