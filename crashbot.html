@@ -1,7 +1,12 @@
 <!doctype html>
 <html>
   <head>
-    <title>Talk.js Example</title>
+    <title>joshsomma.com | crashbot v0.0.1</title>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/foundation.css">
+    <link rel="stylesheet" href="../css/app.css">
     <script src="talk.js"></script>
     <script type="text/javascript">
       var pb = new Pandorabot("aiaas.pandorabots.com", "1409612552099", "crashb0t001", "f235e69c83e364e4740871997a3f8c0f"); // These should match the creds with which you created the bot
@@ -15,14 +20,26 @@
         });
       }
     </script>
+
   </head>
   <body>
-    <h1>Talk to a Pandorabot</h1>
-    <form id="talk" class="boxedin" onsubmit="return false;">
-      <b>You say:</b> <input id="yousay" name="input" size="90" onkeydown="if (event.keyCode == 13) { doTalk(); }"/>
-      <br/>
-      <input id="talkbutton" type="button" value="talk" onclick="doTalk()"/>
-    </form>
-    <p id="response"></p>
+    <body>
+      <div class="row">
+        <div class="large-12 columns">
+          <h1>Talk to crashb0t</h1>
+        </div>
+      </div>
+      <div class="row">
+        <div class="large-12 columns">
+          <div class="callout">
+            <form id="talk" class="boxedin" onsubmit="return false;">
+              <b>You say:</b> <input id="yousay" name="input" size="90" onkeydown="if (event.keyCode == 13) { doTalk(); }"/>
+              <br/>
+              <input id="talkbutton" type="button" value="talk" onclick="doTalk()"/>
+            </form>
+            <p id="response"></p>
+          </div>
+        </div>
+      </div>
   </body>
 </html>
