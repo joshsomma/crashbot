@@ -16,7 +16,7 @@
         var node = document.createElement("LI");
         var textnode = document.createTextNode("me: " + document.getElementById("yousay").value);
         node.appendChild(textnode);
-        node.classList.add("human");
+        node.classList.add("float-right");
         document.getElementById("response_list").appendChild(node);
         pb.talk(input, function(data) {
           var response = data["responses"];
@@ -24,7 +24,7 @@
           var botnode = document.createElement("LI");
           var textnode = document.createTextNode("crashb0t: " + response);
           botnode.appendChild(textnode);
-          botnode.classList.add("robot");
+          botnode.classList.add(".float-left");
           document.getElementById("response_list").appendChild(botnode);
           console.log(response);
         });
