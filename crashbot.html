@@ -43,9 +43,17 @@
         <div class="large-12 columns">
           <div class="callout">
             <form id="talk" class="boxedin" onsubmit="return false;">
-              <b>You say:</b> <input id="yousay" name="input"  placeholder=".medium-6.columns" size="90" onkeydown="if (event.keyCode == 13) { doTalk(); }"/>
-              <br/>
-              <input id="talkbutton" type="button" class="button" value="talk" onclick="doTalk()"/>
+              <div class="row">
+                  <div class="medium-6 columns">
+                    <label>You say:</label>
+                    <input id="yousay" name="input"  placeholder=".medium-6.columns" size="90" onkeydown="if (event.keyCode == 13) { doTalk(); }"/>
+                  </div>
+                </div>
+                <div class="row">
+                    <div class="medium-6 columns">
+                        <input id="talkbutton" type="button" class="button" value="talk" onclick="doTalk()"/>
+                    </div>
+                </div>
             </form>
             <div id="response_area">
               <ul id="response_list">
