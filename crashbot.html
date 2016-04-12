@@ -12,7 +12,6 @@
       var pb = new Pandorabot("aiaas.pandorabots.com", "1409612552099", "crashb0t001", "f235e69c83e364e4740871997a3f8c0f"); // These should match the creds with which you created the bot
       function doTalk() {
         var input = document.getElementById("yousay").value;
-        document.getElementById("yousay").value = "";
         var node = document.createElement("LI");
         var textnode = document.createTextNode("me: " + document.getElementById("yousay").value);
         node.appendChild(textnode);
@@ -26,6 +25,7 @@
           botnode.appendChild(textnode);
           botnode.classList.add("robot");
           document.getElementById("response_list").appendChild(botnode);
+          document.getElementById("yousay").value = "";
           console.log(response);
         });
       }
