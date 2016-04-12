@@ -16,13 +16,15 @@
         var node = document.createElement("LI");
         var textnode = document.createTextNode("me: " + document.getElementById("yousay").value);
         node.appendChild(textnode);
+        node.classList.add("human");
         document.getElementById("response_list").appendChild(node);
         pb.talk(input, function(data) {
           var response = data["responses"];
           //document.getElementById("response").innerHTML = response;
-          //var botnode = document.createElement("LI");
+          var botnode = document.createElement("LI");
           var textnode = document.createTextNode("crashb0t: " + response);
           botnode.appendChild(textnode);
+          botnode.classList.add("robot");
           document.getElementById("response_list").appendChild(botnode);
           console.log(response);
         });
