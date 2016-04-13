@@ -26,6 +26,8 @@
           botnode.classList.add("robot");
           document.getElementById("response_list").appendChild(botnode);
           document.getElementById("yousay").value = "";
+          var objDiv = document.getElementById("response_area");
+          objDiv.scrollTop = objDiv.scrollHeight;
           console.log(response);
         });
       }
