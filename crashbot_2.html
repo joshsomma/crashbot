@@ -1,28 +1,74 @@
 <!doctype html>
 <html>
   <head>
-    <title>Talk.js Example</title>
+    <title>joshsomma.com | crashbot v0.0.1</title>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/foundation.css">
+    <link rel="stylesheet" href="../css/app.css">
     <script src="talk.js"></script>
     <script type="text/javascript">
       var pb = new Pandorabot("aiaas.pandorabots.com", "1409612552099", "crashb0t001", "f235e69c83e364e4740871997a3f8c0f"); // These should match the creds with which you created the bot
       function doTalk() {
         var input = document.getElementById("yousay").value;
-        document.getElementById("yousay").value = "";
+        var node = document.createElement("LI");
+        var textnode = document.createTextNode("me: " + document.getElementById("yousay").value);
+        node.appendChild(textnode);
+        node.classList.add("human");
+        document.getElementById("response_list").appendChild(node);
         pb.talk(input, function(data) {
           var response = data["responses"];
-          document.getElementById("response").innerHTML = response;
+          //document.getElementById("response").innerHTML = response;
+          var botnode = document.createElement("LI");
+          var textnode = document.createTextNode("crashb0t: " + response);
+          botnode.appendChild(textnode);
+          botnode.classList.add("robot");
+          document.getElementById("response_list").appendChild(botnode);
+          document.getElementById("yousay").value = "";
+          var objDiv = document.getElementById("response_area");
+          objDiv.scrollTop = objDiv.scrollHeight;
           console.log(response);
         });
       }
     </script>
+    <style>
+      #response_area {padding:0;margin:0;overflow: scroll; overflow-x:hidden;height:400px;width:80%;border:1px solid #000;}
+      #response_area li {list-style-type: none;display:block;}
+      #response_area .human {background-color: grey;padding:4px 0 4px 10px;margin-bottom:8px;border:1px dotted #000;width:50%;float:right;border-radius:25px;clear:both;}
+      #response_area .robot {background-color: yellow;padding:4px 0 4px 10px;margin-bottom:8px;border:1px dashed #000;width:50%;float:left;border-radius:25px;clear:both;text-align: left;}
+    </style>
   </head>
   <body>
-    <h1>Talk to a Pandorabot</h1>
-    <form id="talk" class="boxedin" onsubmit="return false;">
-      <b>You say:</b> <input id="yousay" name="input" size="90" onkeydown="if (event.keyCode == 13) { doTalk(); }"/>
-      <br/>
-      <input id="talkbutton" type="button" value="talk" onclick="doTalk()"/>
-    </form>
-    <p id="response"></p>
+    <body>
+      <div class="row">
+        <div class="large-12 columns">
+          <h1>Talk to crashb0t</h1>
+        </div>
+      </div>
+      <div class="row">
+        <div class="large-12 columns">
+          <div class="callout">
+            <form id="talk" class="boxedin" onsubmit="return false;">
+              <div class="row">
+                  <div class="medium-6 columns">
+                    <label>You say:</label>
+                    <input id="yousay" name="input" size="40" onkeydown="if (event.keyCode == 13) { doTalk(); }"/>
+                  </div>
+                </div>
+                <div class="row">
+                    <div class="medium-6 columns">
+                        <input id="talkbutton" type="button" class="button" value="talk" onclick="doTalk()"/>
+                    </div>
+                </div>
+            </form>
+            <div id="response_area">
+              <ul id="response_list">
+              </ul>
+            </div>
+            <p id="response"></p>
+          </div>
+        </div>
+      </div>
   </body>
 </html>
