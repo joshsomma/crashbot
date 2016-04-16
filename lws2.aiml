@@ -10,7 +10,12 @@
 
 <category>
 <pattern>$WHEN IS THE NEXT LWS MEETUP</pattern>
-<template>Why don't you check the website at <a href="http://londonwebstandards.org" target="new">londonwebstandards.org</a></template>
+<template>Why don't you check the website at <a href="http://londonwebstandards.org">londonwebstandards.org</a></template>
+</category>
+
+<category>
+<pattern>$Im NOT SURE WHEN THE NEXT LWS MEETUP IS</pattern>
+<template>I'm not sure either<br />Try asking Dave</template>
 </category>
 
 

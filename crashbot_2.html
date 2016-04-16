@@ -20,11 +20,11 @@
         document.getElementById("response_list").appendChild(node);
         pb.talk(input, function(data) {
           var response = data["responses"];
-          console.log(response);
           //document.getElementById("response").innerHTML = response;
           var botnode = document.createElement("LI");
-          var textnode = document.createTextNode("crashb0t: " + response);
-          botnode.appendChild(textnode);
+          var bot_response = "crashb0t: " + response;
+          //var textnode = document.createTextNode("crashb0t: " + response);
+          botnode.innerHTML(bot_response);
           botnode.classList.add("robot");
           document.getElementById("response_list").appendChild(botnode);
           document.getElementById("yousay").value = "";
