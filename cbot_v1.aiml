@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+
+<category><pattern>*</pattern>
+<template>Sorry, I have run out of things to say</template>
+</category>
+
+<category>
+<pattern>Hello</pattern>
+<template>Hi there</template>
+</category>
+
+</aiml>
