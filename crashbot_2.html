@@ -24,7 +24,7 @@
           var botnode = document.createElement("LI");
           var bot_response = "crashb0t: " + response;
           //var textnode = document.createTextNode("crashb0t: " + response);
-          botnode.innerHTML(bot_response);
+          botnode.innerHTML = bot_response;
           botnode.classList.add("robot");
           document.getElementById("response_list").appendChild(botnode);
           document.getElementById("yousay").value = "";
