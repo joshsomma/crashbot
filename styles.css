@@ -1,4 +1,4 @@
-#response_area {padding:0;margin:0;overflow: scroll; overflow-x:hidden;height:400px;width:80%;border:1px solid #000;}
+#response_area {padding:0;margin:0;overflow: scroll; overflow-x:hidden;height:300px;width:80%;border:1px solid #000;}
 #response_area li {list-style-type: none;display:block;}
 #response_area .human {background-color: orange;padding:4px 0 4px 10px;margin-bottom:8px;border:1px dotted #000;width:50%;float:right;border-radius:25px;clear:both;font-size: 2em;}
-#response_area .robot {background-color: yellow;padding:4px 0 4px 10px;margin-bottom:8px;border:1px dashed #000;width:50%;float:left;border-radius:25px;clear:both;text-align: left;}
+#response_area .robot {background-color: yellow;padding:4px 0 4px 10px;margin-bottom:8px;border:1px dashed #000;width:50%;float:left;border-radius:25px;clear:both;text-align: left;font-size: 2em;}
