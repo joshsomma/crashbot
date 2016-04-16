@@ -20,6 +20,7 @@
         document.getElementById("response_list").appendChild(node);
         pb.talk(input, function(data) {
           var response = data["responses"];
+          console.log(response);
           //document.getElementById("response").innerHTML = response;
           var botnode = document.createElement("LI");
           var textnode = document.createTextNode("crashb0t: " + response);
