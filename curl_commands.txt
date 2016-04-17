@@ -1,5 +1,7 @@
+http://joshsomma.com/crashbot/styles.css
+
 //create bot
-curl -v  -X PUT 'https://aiaas.pandorabots.com/bot/1409612552099/BOTNAME?user_key=f235e69c83e364e4740871997a3f8c0f'
+curl -v  -X PUT 'https://aiaas.pandorabots.com/bot/1409612552099/crashbot?user_key=f235e69c83e364e4740871997a3f8c0f'
 
 //get list of bots
 curl -v  -X GET 'https://aiaas.pandorabots.com/bot/1409612552099?user_key=f235e69c83e364e4740871997a3f8c0f'
@@ -8,10 +10,10 @@ curl -v  -X GET 'https://aiaas.pandorabots.com/bot/1409612552099?user_key=f235e6
 curl -v  -X PUT 'https://aiaas.pandorabots.com/bot/1409612552099/crashb0t002?user_key=f235e69c83e364e4740871997a3f8c0f'
 
 //put a file
-curl -v -X PUT 'https://aiaas.pandorabots.com/bot/1409612552099/crashb0t002/file/config.aiml?user_key=f235e69c83e364e4740871997a3f8c0f' --data-binary @/Users/josh/Downloads/rosie-master/lib/aiml/config.aiml
+curl -v -X PUT 'https://aiaas.pandorabots.com/bot/1409612552099/crashb0t001/file/lws2.aiml?user_key=f235e69c83e364e4740871997a3f8c0f' --data-binary @/Users/josh/Documents/workspace/crashbot/lws2.aiml
 
 //get list of files
-curl -v  -X GET 'https://aiaas.pandorabots.com/bot/1409612552099/crashb0t002?user_key=f235e69c83e364e4740871997a3f8c0f'
+curl -v  -X GET 'https://aiaas.pandorabots.com/bot/1409612552099/crashb0t001?user_key=f235e69c83e364e4740871997a3f8c0f'
 
 //delete file
 curl -v -X DELETE 'https://aiaas.pandorabots.com/bot/1409612552099/crashb0t002/file/fastfood.set.set?user_key=f235e69c83e364e4740871997a3f8c0f'
@@ -20,7 +22,7 @@ curl -v -X DELETE 'https://aiaas.pandorabots.com/bot/1409612552099/crashb0t002/f
 curl -v -X PUT 'https://aiaas.pandorabots.com/bot/1409612552099/crashb0t002/pdefaults?user_key=f235e69c83e364e4740871997a3f8c0f' --data-binary @/Users/josh/Downloads/rosie-master/lib/system/rosie.pdefaults
 
 //compile the bot
-curl -v  -X GET 'https://aiaas.pandorabots.com/bot/1409612552099/crashb0t002/verify?user_key=f235e69c83e364e4740871997a3f8c0f'
+curl -v  -X GET 'https://aiaas.pandorabots.com/bot/1409612552099/crashb0t001/verify?user_key=f235e69c83e364e4740871997a3f8c0f'
 
 //get a file
 curl -v -X GET "https://aiaas.pandorabots.com/bot/1409612552099/crashb0t001/aiml/default.aiml?user_key=f235e69c83e364e4740871997a3f8c0f"
